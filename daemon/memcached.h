@@ -370,6 +370,9 @@ struct conn {
         BIO *application;
         BIO *network;
     } ssl;
+
+    /* The revision number of the clustermap sent to the client */
+    int clustermap_revno;
 };
 
 /* States for the connection list_state */
